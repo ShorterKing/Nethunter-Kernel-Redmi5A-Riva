@@ -8,7 +8,7 @@ Kali NetHunter-compatible kernel for the Redmi 5A (codename: riva). This project
 - Install crDroid Android 14 (riva) first. This kernel is built to work with crDroid Android 14 only. See crDroid downloads and installation instructions: [crDroid Downloads](https://crdroid.net/rova/10) and [Installation Guide](https://crdroid.net/rova/10/install).
 - You will need OrangeFox recovery (or another compatible custom recovery) to flash crDroid and this kernel zip. Boot into recovery and flash from there.
 - crDroid ships with KernelSU by default, but that version may be outdated. Use Magisk 28.0 to root the device for best compatibility (recommended).
-- If external Wi-Fi adapters do not show up automatically, install the wireless-firmware Magisk module (available in the r Releases).
+- If external Wi-Fi adapters do not show up automatically, install the wireless-firmware Magisk module (available in the Releases).
 
 ## Downloads / Releases
 Look in the [Releases](https://github.com/ShorterKing/Nethunter-Kernel-Redmi5A-Riva/releases) section for:
