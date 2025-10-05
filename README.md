@@ -47,6 +47,8 @@ This kernel includes (but is not limited to):
 - RFCOMM & RFCOMM TTY support
 - Added HID-keyboard support and other HID keyboard compatibility
 - Other NetHunter-related patches included to improve tool compatibility
+- One more thing if HID does not work please run this command as root 
+- mknod --mode=666 /dev/hidg0 c 240 0 && mknod --mode=666 /dev/hidg1 c 240 1 && dmesg | grep hidg
 
 If you rely on a specific external adapter, check its chipset and confirm driver support in this kernel.
 
