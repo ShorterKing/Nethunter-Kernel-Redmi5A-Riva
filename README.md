@@ -20,14 +20,14 @@ Look in the [Releases](https://github.com/ShorterKing/Nethunter-Kernel-Redmi5A-R
 2. Install crDroid Android 14 (riva) following crDroid’s official install guide: [crDroid Installation Guide](https://crdroid.net/rova/10/install). (Flash crDroid first, reboot to recovery if instructed.)
 3. Boot into OrangeFox (recovery).
 4. From recovery, flash `crdroid14_riva_NetHunter.zip` (from Releases).
-5. Reboot device.
+5. Reboot the device.
 6. Root with Magisk 28.0 (install Magisk through recovery or the Magisk app).
 7. If external adapters are not detected, flash the wireless-firmware Magisk module (provided in this repo’s Releases or `magisk-modules/`). Reboot.
 8. Verify NetHunter functions (Wi-Fi injection, monitor mode, HID devices, etc.).
 
 ## Features / What’s Included
 This kernel includes (but is not limited to):
-- Added RTL88xxAU drivers (support for many Realtek USB Wi-Fi adapters)
+- Added RTL88xxAU, RTL8811CU,mt7921 drivers (support for many Realtek USB Wi-Fi adapters)
 - Wi-Fi injection support for external adapters (aircrack-ng style injection)
 - Monitor mode for supported adapters
 - HID support — broad compatibility with HID devices and keyboards
