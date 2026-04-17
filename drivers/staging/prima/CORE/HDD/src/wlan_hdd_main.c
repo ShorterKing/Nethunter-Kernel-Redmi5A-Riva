@@ -357,6 +357,20 @@ static int __hdd_netdev_notifier_call(struct notifier_block * nb,
       return NOTIFY_DONE;
    }
 
+   /* Verify this net_device actually belongs to prima.
+    * Other drivers (e.g. mt7601u) also name their interfaces "wlan*" and
+    * set ieee80211_ptr, so they pass the guards above. Their netdev_priv
+    * is not a prima hdd_adapter_t and must not be dereferenced as one.
+    * On disconnect the private data may already be freed (LIST_POISON),
+    * causing a kernel oops at the pHddCtx dereference below.
+    */
+   if (pAdapter->magic != WLAN_HDD_ADAPTER_MAGIC)
+   {
+      hddLog(VOS_TRACE_LEVEL_INFO,"%s: magic mismatch, ignoring non-prima dev %s",
+             __func__, dev->name);
+      return NOTIFY_DONE;
+   }
+
    pHddCtx = WLAN_HDD_GET_CTX(pAdapter);
    if (NULL == pHddCtx)
    {
